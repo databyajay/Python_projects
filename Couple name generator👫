@@ -1,0 +1,12 @@
+print("Wellcome to the coUple name generator❤️ :")
+first_name=input("Enter the name of the first person:")
+second_name=input("Enter the name of the second person:")
+length1=len(first_name)
+length2=len(second_name)
+if length1<3 or length2<3:
+    print("names are too short...!")
+elif length1>15 or length2>15:
+    print("names are too large...!")
+else:
+    couple_name=first_name[:3]+second_name[-2:]
+print("Generated couple name is: "+couple_name)
