@@ -1,4 +1,4 @@
-print("Wellcome to the coUple name generator❤️ :")
+print("Welcome to the couple name generator❤️ :")
 first_name=input("Enter the name of the first person:")
 second_name=input("Enter the name of the second person:")
 length1=len(first_name)
