@@ -1,0 +1,47 @@
+print("===================================")
+print("      WELCOME TO MY MART")
+print("===================================")
+
+# Customer Name
+customer_name = input("Enter Customer Name: ")
+
+# Item 1
+item1 = input("Enter First Item Name: ")
+price1 = float(input("Enter First Item Price: "))
+
+# Item 2
+item2 = input("Enter Second Item Name: ")
+price2 = float(input("Enter Second Item Price: "))
+
+# Item 3
+item3 = input("Enter Third Item Name: ")
+price3 = float(input("Enter Third Item Price: "))
+
+# Total Bill
+total = price1 + price2 + price3
+
+# Discount
+if total >= 1000:
+    discount = total * 0.10
+elif total >= 500:
+    discount = total * 0.05
+else:
+    discount = 0
+
+# Final Bill
+final_bill = total - discount
+
+# Printing Bill
+print("\n========== BILL ==========")
+print("Customer :", customer_name)
+
+print(item1, ":", price1)
+print(item2, ":", price2)
+print(item3, ":", price3)
+
+print("--------------------------")
+print("Total Bill :", total)
+print("Discount :", discount)
+print("Final Bill :", final_bill)
+print("==========================")
+print("Thank You! Visit Again 😊")
