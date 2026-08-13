@@ -1,0 +1,33 @@
+print("=" * 45)
+print("        BMI CALCULATOR")
+print("=" * 45)
+
+# User Input
+name = input("Enter your name: ")
+weight = float(input("Enter your weight (kg): "))
+height = float(input("Enter your height (meters): "))
+
+# BMI Calculation
+bmi = weight / (height * height)
+
+print("\n" + "=" * 45)
+print("BMI REPORT")
+print("=" * 45)
+
+print("Name :", name)
+print("Weight :", weight, "kg")
+print("Height :", height, "m")
+print("Your BMI :", round(bmi, 2))
+
+# BMI Category
+if bmi < 18.5:
+    print("Category : Underweight")
+elif bmi < 25:
+    print("Category : Normal Weight")
+elif bmi < 30:
+    print("Category : Overweight")
+else:
+    print("Category : Obese")
+
+print("=" * 45)
+print("Thank you for using the BMI Calculator!")
