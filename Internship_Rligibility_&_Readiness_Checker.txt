@@ -1,0 +1,218 @@
+# ============================================================
+#       INTERNSHIP ELIGIBILITY & READINESS CHECKER
+# ============================================================
+
+print("=" * 60)
+print("       INTERNSHIP ELIGIBILITY & READINESS CHECKER")
+print("=" * 60)
+
+# -------------------- PERSONAL DETAILS -----------------------
+
+name = input("\nEnter your name: ")
+age = int(input("Enter your age: "))
+
+student = input("Are you currently a student? (yes/no): ").lower()
+
+print("\n---------------- SKILL ASSESSMENT ----------------")
+
+python_skill = input("Do you know Python? (yes/no): ").lower()
+excel_skill = input("Do you know Excel? (yes/no): ").lower()
+sql_skill = input("Do you know SQL? (yes/no): ").lower()
+powerbi_skill = input("Do you know Power BI? (yes/no): ").lower()
+
+print("\n---------------- PROFILE DETAILS ----------------")
+
+projects = int(input("How many projects have you completed? "))
+
+resume = input("Do you have a resume? (yes/no): ").lower()
+experience = input("Do you have previous internship experience? (yes/no): ").lower()
+
+
+# -------------------- SCORE CALCULATION ----------------------
+
+score = 0
+
+# Age
+if age >= 18:
+    score += 10
+
+# Student status
+if student == "yes":
+    score += 10
+
+# Python
+if python_skill == "yes":
+    score += 15
+
+# Excel
+if excel_skill == "yes":
+    score += 10
+
+# SQL
+if sql_skill == "yes":
+    score += 15
+
+# Power BI
+if powerbi_skill == "yes":
+    score += 15
+
+# Resume
+if resume == "yes":
+    score += 10
+
+# Projects
+if projects >= 1:
+    score += 10
+
+# Previous experience
+if experience == "yes":
+    score += 5
+
+
+# -------------------- ELIGIBILITY ---------------------------
+
+if age >= 18 and student == "yes" and resume == "yes":
+    eligibility = "ELIGIBLE"
+else:
+    eligibility = "NOT ELIGIBLE YET"
+
+
+# -------------------- READINESS LEVEL -----------------------
+
+if score >= 80:
+    readiness = "INTERNSHIP READY 🚀"
+
+elif score >= 60:
+    readiness = "ALMOST READY 🟢"
+
+elif score >= 40:
+    readiness = "NEEDS IMPROVEMENT 🟡"
+
+else:
+    readiness = "BEGINNER STAGE 🔴"
+
+
+# -------------------- FINAL REPORT --------------------------
+
+print("\n")
+print("=" * 60)
+print("                 INTERNSHIP REPORT")
+print("=" * 60)
+
+print("\nPERSONAL INFORMATION")
+print("-" * 60)
+
+print("Candidate Name       :", name)
+print("Age                  :", age)
+print("Student              :", student)
+
+
+print("\nSKILL PROFILE")
+print("-" * 60)
+
+print("Python               :", python_skill)
+print("Excel                :", excel_skill)
+print("SQL                  :", sql_skill)
+print("Power BI             :", powerbi_skill)
+
+
+print("\nPROFILE INFORMATION")
+print("-" * 60)
+
+print("Projects Completed   :", projects)
+print("Resume Available     :", resume)
+print("Previous Experience  :", experience)
+
+
+print("\nREADINESS RESULT")
+print("-" * 60)
+
+print("Eligibility Status   :", eligibility)
+print("Readiness Score      :", str(score) + "/100")
+print("Readiness Level      :", readiness)
+
+
+# -------------------- STRENGTHS ------------------------------
+
+print("\nYOUR STRENGTHS")
+print("-" * 60)
+
+if python_skill == "yes":
+    print("✓ Python")
+
+if excel_skill == "yes":
+    print("✓ Excel")
+
+if sql_skill == "yes":
+    print("✓ SQL")
+
+if powerbi_skill == "yes":
+    print("✓ Power BI")
+
+if projects >= 1:
+    print("✓ Project Experience")
+
+if resume == "yes":
+    print("✓ Resume Ready")
+
+if experience == "yes":
+    print("✓ Previous Internship Experience")
+
+
+# -------------------- IMPROVEMENT AREAS ---------------------
+
+print("\nAREAS TO IMPROVE")
+print("-" * 60)
+
+if python_skill != "yes":
+    print("⚠ Learn Python")
+
+if excel_skill != "yes":
+    print("⚠ Improve Excel")
+
+if sql_skill != "yes":
+    print("⚠ Learn SQL")
+
+if powerbi_skill != "yes":
+    print("⚠ Learn Power BI")
+
+if projects == 0:
+    print("⚠ Build at least one project")
+
+if resume != "yes":
+    print("⚠ Create a professional resume")
+
+if experience != "yes":
+    print("⚠ Start applying for internships")
+
+
+# -------------------- RECOMMENDATION -------------------------
+
+print("\nRECOMMENDATION")
+print("-" * 60)
+
+if score >= 80:
+
+    print("You are ready to start applying for internships!")
+    print("Keep improving your skills and build real-world projects.")
+
+elif score >= 60:
+
+    print("You are close to being internship ready.")
+    print("Improve your weak areas and start applying.")
+
+elif score >= 40:
+
+    print("You have started your journey, but there is room")
+    print("for improvement. Focus on building technical skills.")
+
+else:
+
+    print("Focus on learning the fundamentals first.")
+    print("Build skills, projects and a professional resume.")
+
+
+print("\n")
+print("=" * 60)
+print("          GOOD LUCK WITH YOUR CAREER! 🚀")
+print("=" * 60)
